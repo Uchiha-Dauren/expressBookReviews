@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' -X POST http://127.0.0.1:5090/register -H 'Content-Type: application/json' -d '{"username":"bookstore_demo","password":"CourseworkDemo2026!"}'
+
+{"message":"User successfully registered. You can now log in."}
+HTTP status: 201

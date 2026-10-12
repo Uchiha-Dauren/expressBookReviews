@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' http://127.0.0.1:5090/review/1
+
+{}
+HTTP status: 200

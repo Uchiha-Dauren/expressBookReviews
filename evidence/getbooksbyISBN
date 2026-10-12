@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' http://127.0.0.1:5090/isbn/1
+
+{"author":"Chinua Achebe","title":"Things Fall Apart","reviews":{}}
+HTTP status: 200

@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' -X DELETE http://127.0.0.1:5090/customer/auth/review/1 -b cookies.txt
+
+{"message":"Your review was deleted.","reviews":{}}
+HTTP status: 200

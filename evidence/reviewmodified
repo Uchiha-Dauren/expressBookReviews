@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' -X PUT http://127.0.0.1:5090/customer/auth/review/1 -b cookies.txt -H 'Content-Type: application/json' -d '{"review":"Updated review: a compelling and thought-provoking novel."}'
+
+{"message":"Review updated.","reviews":{"bookstore_demo":"Updated review: a compelling and thought-provoking novel."}}
+HTTP status: 200

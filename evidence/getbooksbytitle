@@ -1,0 +1,6 @@
+$ curl -sS --max-time 20 -w '
+HTTP status: %{http_code}
+' http://127.0.0.1:5090/title/Pride%20and%20Prejudice
+
+{"8":{"author":"Jane Austen","title":"Pride and Prejudice","reviews":{}}}
+HTTP status: 200
