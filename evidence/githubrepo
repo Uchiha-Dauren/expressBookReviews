@@ -1,3 +1,4 @@
-$ curl -fsSL https://github.com/Uchiha-Dauren/expressBookReviews | python3 -c 'import sys,re,html; text=" ".join(html.unescape(re.sub(r"<[^>]+>", " ", sys.stdin.read())).split()); print(re.search("forked from ibm-developer-skills-network / expressBookReviews", text).group(0))'
+# Authentication header was supplied privately via curl configuration on stdin. No token is included here.
+$ curl -fsS --config - https://api.github.com/repos/Uchiha-Dauren/expressBookReviews | jq '.parent.full_name'
 
-forked from ibm-developer-skills-network / expressBookReviews
+"ibm-developer-skills-network/expressBookReviews"

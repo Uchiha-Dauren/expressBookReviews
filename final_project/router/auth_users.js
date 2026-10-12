@@ -86,7 +86,7 @@ regd_users.post('/login', async (req, res, next) => {
     });
     req.session.authorization = { accessToken };
     await new Promise((resolve, reject) => req.session.save((error) => error ? reject(error) : resolve()));
-    return res.status(200).json({ message: 'User successfully logged in.', username });
+    return res.status(200).json({ message: 'Customer successfully logged in', username, registered: true });
   } catch (error) {
     return next(error);
   }
@@ -117,7 +117,7 @@ regd_users.delete('/auth/review/:isbn', (req, res) => {
     return res.status(404).json({ message: 'You have not reviewed this book.' });
   }
   delete reviews[req.user.username];
-  return res.status(200).json({ message: 'Your review was deleted.', reviews });
+  return res.status(200).json({ message: `Review for ISBN ${isbn} deleted`, reviews });
 });
 
 module.exports = { authenticated: regd_users, requireAuth, registerUser, isValid, authenticatedUser, users };

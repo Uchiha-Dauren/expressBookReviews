@@ -2,5 +2,5 @@ $ curl -sS --max-time 20 -w '
 HTTP status: %{http_code}
 ' -X POST http://127.0.0.1:5090/customer/login -H 'Content-Type: application/json' -d '{"username":"bookstore_demo","password":"CourseworkDemo2026!"}' -c cookies.txt
 
-{"message":"User successfully logged in.","username":"bookstore_demo"}
+{"message":"Customer successfully logged in","username":"bookstore_demo","registered":true}
 HTTP status: 200
